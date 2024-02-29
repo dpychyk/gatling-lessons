@@ -1,28 +1,18 @@
 package org.example.scenarios;
 
-import com.typesafe.scalalogging.Logger;
-import com.typesafe.scalalogging.StrictLogging;
-import io.gatling.commons.stats.OK;
-import io.gatling.commons.stats.Status;
-import io.gatling.core.action.Action;
-import io.gatling.core.structure.ScenarioContext;
-import io.gatling.javaapi.core.*;
-import io.gatling.javaapi.core.exec.Executable;
+import io.gatling.javaapi.core.ScenarioBuilder;
+import io.gatling.javaapi.core.Simulation;
 import io.gatling.javaapi.http.HttpProtocolBuilder;
-import org.checkerframework.checker.units.qual.A;
-import scala.util.Success;
 
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Function;
 import java.util.stream.IntStream;
 
-import static io.gatling.javaapi.core.CoreDsl.*;
+import static io.gatling.javaapi.core.CoreDsl.scenario;
 import static io.gatling.javaapi.core.OpenInjectionStep.atOnceUsers;
 import static io.gatling.javaapi.http.HttpDsl.http;
-import static io.gatling.javaapi.http.HttpDsl.status;
 
 public class MyTestJavaGatling extends Simulation {
 
