@@ -35,7 +35,7 @@ jobs:
 
           # Path to the Gatling Test Suite's pom.xml file
           # Default: './test'
-          pomPath: '.'
+          pomPath: '/'
 
           # Class of the simulation to run ('myPackage.MySimulationClass')
           # Default: ''
