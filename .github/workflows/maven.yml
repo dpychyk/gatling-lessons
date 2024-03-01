@@ -22,8 +22,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Checkout test
       - uses: actions/checkout@v3
-      - name: Checkout gh-pages
         with:
           ref: 'gh-pages'
           path: dpPath
