@@ -34,11 +34,28 @@ jobs:
         with:
           name: gatling-results
           path: target/gatling
-      - name: HTML Preview
-        id: html_preview
-        uses: pavi2410/html-preview-action@v2
+      - uses: liatrio/run-gatling@v1.2.0
         with:
-          html_file: 'target/gatling/*/index.html'
+          # Java Version to use
+          # Default: '17'
+          javaVersion: '11'
+
+          # Java Distribution to use
+          # Default: 'microsoft'
+          javaDistribution: 'temurin'
+
+          # Path to the Gatling Test Suite's pom.xml file
+          # Default: './test'
+          pomPath: './gatling-lessons'
+
+          # Class of the simulation to run ('myPackage.MySimulationClass')
+          # Default: ''
+          # (Optionnal)
+          # Note: If the Test Suite contains more than one simulation,
+          #       you may want to configure the Maven plugin to run
+          #       multiple simulations. Otherwise, you will have to fill this
+          #       parameter with the specific simulation to execute.
+          simulationClass: 'org.example.scenarios.MyTestJavaGatling'
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     #- name: Update dependency graph
