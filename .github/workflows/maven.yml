@@ -29,6 +29,9 @@ jobs:
           ref: 'gh-pages'
           path: dpPath
 
+      - name: Create file in dpPath
+        run: echo 'This is a test' > data.txt
+
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
@@ -42,5 +45,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./report/index.html
+          publish_dir: ./dpPath/*
           keep_files: true
