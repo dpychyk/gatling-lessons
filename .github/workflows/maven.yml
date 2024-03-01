@@ -20,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v3
       - uses: liatrio/run-gatling@v1.2.0
         with:
           # Java Version to use
@@ -32,7 +33,7 @@ jobs:
 
           # Path to the Gatling Test Suite's pom.xml file
           # Default: './test'
-          pomPath: '.'
+          pomPath: 'gatling-lessons'
 
           # Class of the simulation to run ('myPackage.MySimulationClass')
           # Default: ''
