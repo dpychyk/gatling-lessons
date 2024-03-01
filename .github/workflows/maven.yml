@@ -41,6 +41,8 @@ jobs:
       - name: Run gatling test
         run: mvn gatling:test
 
+      - name: Create file in dpPath
+        run: ls
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
