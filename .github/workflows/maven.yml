@@ -30,7 +30,7 @@ jobs:
           path: dpPath
 
       - name: Create file in dpPath
-        run: echo 'This is a test' > data.txt
+        run: echo 'This is a test' > dpPath/data.txt
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
