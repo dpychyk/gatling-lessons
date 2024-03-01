@@ -14,7 +14,7 @@ import static io.gatling.javaapi.core.CoreDsl.scenario;
 import static io.gatling.javaapi.core.OpenInjectionStep.atOnceUsers;
 import static io.gatling.javaapi.http.HttpDsl.http;
 
-//My test 2
+//My test 3
 public class MyTestJavaGatling extends Simulation {
     HttpProtocolBuilder httpProtocol = http
             .baseUrl("http://computer-database.gatling.io")
