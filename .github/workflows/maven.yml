@@ -31,7 +31,7 @@ jobs:
         run: mvn gatling:test
 
       - name: Deploy
-    uses: peaceiris/actions-gh-pages@v3
-    with:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
-      publish_dir: ./target/gatling
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         publish_dir: ./target/gatling
