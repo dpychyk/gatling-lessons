@@ -31,7 +31,7 @@ public class MyTestJavaGatling extends Simulation {
             .exec(http("get#{number}").get("/"));
 
     {
-        setUp(createPlans.injectOpen(atOnceUsers(1))
+        setUp(createPlans.injectOpen(atOnceUsers(15))
         ).protocols(httpProtocol).maxDuration(Duration.ofSeconds(180));
     }
 }

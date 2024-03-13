@@ -3,7 +3,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.gatling.demo</groupId>
+    <groupId>org.example</groupId>
     <artifactId>gatling-maven-plugin-demo-java</artifactId>
     <version>3.10.4</version>
 
@@ -25,6 +25,14 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>gatling-lessons</id>
+            <name>GitHub dpychyk Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/dpychyk/gatling-lessons</url>
+        </repository>
+    </distributionManagement>
 
     <build>
         <plugins>
