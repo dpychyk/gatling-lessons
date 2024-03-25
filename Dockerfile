@@ -4,4 +4,4 @@ COPY . /gatling-lessons
 WORKDIR /gatling-lessons
 RUN chmod +x run_tests.sh
 
-ENTRYPOINT ./run_testws.sh
+ENTRYPOINT ./run_tests.sh
