@@ -38,7 +38,7 @@ jobs:
         run: ls
 
       - name: Collect gatling reports
-        run: cp -r github-lessons/reports/ gpages
+        run: cp -r reports/ gpages
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
