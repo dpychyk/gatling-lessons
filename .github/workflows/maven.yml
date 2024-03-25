@@ -39,7 +39,7 @@ jobs:
 
       - name: Collect gatling reports
         working-directory: ./gatling-lessons
-        run: cp -r reports/ /gpages
+        run: cp -r reports/ ./gpages
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
