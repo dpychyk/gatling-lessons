@@ -26,7 +26,7 @@ jobs:
           path: gatling-lessons
 
       - name: Test Docker  
-        run: docker-compose -f /docker-compose-gatling-test up -d --build
+        run: docker-compose -f docker-compose-gatling-test.yml up -d --build
 
       - name: Checkout test1
         uses: actions/checkout@v3
