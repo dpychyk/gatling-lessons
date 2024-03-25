@@ -1,4 +1,4 @@
-package org.example.scenarios;
+package org.example.scenarios.api;
 
 import io.gatling.javaapi.core.ScenarioBuilder;
 import io.gatling.javaapi.core.Simulation;
@@ -27,11 +27,9 @@ public class MyTestJavaGatling extends Simulation {
     Iterator<Map<String, Object>> feeder =  IntStream.of(0, 2)
             .mapToObj((i) -> Map.of("number", (Object) String.format("computer_%s", i))).iterator();
     ScenarioBuilder createPlans = scenario("Plan creation")
-            .feed(feeder)
-            .exec(http("get#{number}").get("/"));
+            .exec(http("get").get("/"));
 
     {
-        setUp(createPlans.injectOpen(atOnceUsers(15))
-        ).protocols(httpProtocol).maxDuration(Duration.ofSeconds(180));
+        setUp(createPlans.injectOpen(atOnceUsers(15))).protocols(httpProtocol).maxDuration(Duration.ofSeconds(180));
     }
 }

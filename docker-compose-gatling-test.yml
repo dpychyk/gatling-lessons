@@ -1,0 +1,12 @@
+version: '0.1'
+
+services:
+  gatlingtest:
+    image: mytestmvn
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - SIMULATIONS=${SIMULATIONS}
+    volumes:
+      - ./reports:/gatling-lessons/reports
