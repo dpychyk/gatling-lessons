@@ -24,7 +24,5 @@ jobs:
           path: gatling-lessons
       - name: Run gatling test
         working-directory: ./gatling-lessons
-        run: docker
-      - name: Run tests
         run: SIMULATIONS=* docker-compose -f docker-compose-gatling-test.yml up
 
