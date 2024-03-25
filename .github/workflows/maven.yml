@@ -23,12 +23,6 @@ jobs:
         with:
           path: gatling-lessons
 
-      - name: Checkout Gatling Pages
-        uses: actions/checkout@v4
-        with:
-          ref: 'gh-pages'
-          path: gpages
-
       - name: Run gatling test
         working-directory: ./gatling-lessons
         run: SIMULATIONS="org.example.scenarios.api.JavaGatling" docker-compose -f docker-compose-gatling-test.yml up
@@ -39,5 +33,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           destination_dir: ${{ github.run_number }}
           publish_dir: gatling-lessons/reports/gatling/*
-          keep_files: true
+          keep_files: false
 
