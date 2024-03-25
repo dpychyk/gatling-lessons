@@ -44,6 +44,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          destination_dir: ${{ github.run_number }}
           publish_dir: gpages/gatling-reports*
           keep_files: true
 
