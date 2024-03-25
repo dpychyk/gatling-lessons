@@ -33,18 +33,11 @@ jobs:
         working-directory: ./gatling-lessons
         run: SIMULATIONS="org.example.scenarios.api.JavaGatling" docker-compose -f docker-compose-gatling-test.yml up
 
-      - name: Collect gatling reports
-        run: mkdir gpages/gatling-reports-${{ github.run_number }} &&
-          cp -r gatling-lessons/reports/gatling/* gpages/gatling-reports-${{ github.run_number }}
-
-      - name: Collect gatling reports
-        run: ls gpages/gatling-reports-${{ github.run_number }}
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           destination_dir: ${{ github.run_number }}
-          publish_dir: gpages/gatling-reports*
+          publish_dir: gatling-lessons/reports/gatling/*
           keep_files: true
 
