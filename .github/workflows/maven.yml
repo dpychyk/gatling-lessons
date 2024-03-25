@@ -35,6 +35,10 @@ jobs:
 
       - name: Collect gatling reports
         working-directory: ./gatling-lessons
+        run: ls
+
+      - name: Collect gatling reports
+        working-directory: ./gatling-lessons
         run: cp -r reports/target/gatling /gpages
 
       - name: Deploy
