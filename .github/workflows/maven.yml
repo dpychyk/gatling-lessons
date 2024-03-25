@@ -34,11 +34,11 @@ jobs:
         run: SIMULATIONS="org.example.scenarios.api.JavaGatling" docker-compose -f docker-compose-gatling-test.yml up
 
       - name: Collect gatling reports
-        run: ls
-
-      - name: Collect gatling reports
         run: mkdir gpages/${{ github.run_number }} &&
           cp -r gatling-lessons/reports/gatling/* gpages/${{ github.run_number }}
+
+      - name: Collect gatling reports
+        run: ls gpages/${{ github.run_number }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
