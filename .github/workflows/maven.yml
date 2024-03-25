@@ -24,4 +24,6 @@ jobs:
           path: gatling-lessons
       - name: Ls command
         run: ls
+      - name: Ls command
+        run: ls gatling-lessons
 
