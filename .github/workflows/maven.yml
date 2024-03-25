@@ -31,7 +31,7 @@ jobs:
       - name: Test Docker  
         uses: adambirds/docker-compose-action@v1.3.0
         with:
-          compose-file: "gatling-lessons/docker-compose-gatling-test.yml"
+          compose-file: "docker-compose-gatling-test.yml"
           test-container: helloworld
         env:
             CUSTOM_VARIABLE: "test"
