@@ -31,7 +31,7 @@ jobs:
 
       - name: Run gatling test
         working-directory: ./gatling-lessons
-        run: SIMULATIONS=org.example.scenarios.api.JavaGatling docker-compose -f docker-compose-gatling-test.yml up
+        run: SIMULATIONS="org.example.scenarios.api.JavaGatling" docker-compose -f docker-compose-gatling-test.yml up
 
       - name: Collect gatling reports
         working-directory: ./gatling-lessons
