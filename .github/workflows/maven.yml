@@ -15,28 +15,13 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
-
+  run-tests:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: gatling-lessons
+      - name: Ls command
+        run: ls
 
-      - name: Test Docker  
-        run: docker-compose -f gatling-lessons/docker-compose-gatling-test.yml up -d --build
-
-      - name: Checkout test1
-        uses: actions/checkout@v3
-        with:
-          ref: 'gh-pages'
-          path: gpreport
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./target/gatling/
-          keep_files: true
