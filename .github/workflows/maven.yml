@@ -37,7 +37,7 @@ jobs:
         run: ls
 
       - name: Collect gatling reports
-        run: |
+        run: mkdir gpages/${{ github.run_number }} &&
           cp -r gatling-lessons/reports/gatling/* gpages/${{ github.run_number }}
 
       - name: Deploy

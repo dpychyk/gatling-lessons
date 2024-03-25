@@ -6,5 +6,3 @@
   "image":  "maven:3.8.6"
 
 }
-
-[ERROR] Failed to execute goal on project gatling-maven-plugin-demo-java: Could not resolve dependencies for project org.example:gatling-maven-plugin-demo-java:jar:0.1: The following artifacts could not be resolved: io.gatling.highcharts:gatling-charts-highcharts:jar:0.1 (absent): io.gatling.highcharts:gatling-charts-highcharts:jar:0.1 was not found in https://maven.pkg.github.com/dpychyk/gatling-lessons during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of github_perf has elapsed or updates are forced -> [Help 1]
