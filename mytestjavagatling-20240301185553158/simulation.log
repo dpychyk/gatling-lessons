@@ -1,5 +1,0 @@
-RUN	org.example.scenarios.MyTestJavaGatling	mytestjavagatling	1709319353158	Test	3.10.4
-USER	Plan creation	START	1709319353941
-REQUEST		getcomputer_0	1709319353967	1709319353993	OK	 
-REQUEST		getcomputer_0 Redirect 1	1709319354006	1709319354020	OK	 
-USER	Plan creation	END	1709319354029
