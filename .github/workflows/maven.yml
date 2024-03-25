@@ -18,11 +18,29 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout source code
         uses: actions/checkout@v4
         with:
           path: gatling-lessons
+
+      - name: Checkout Gatling Pages
+        uses: actions/checkout@v4
+        with:
+          ref: 'gh-pages'
+          path: gpages
+
       - name: Run gatling test
         working-directory: ./gatling-lessons
         run: SIMULATIONS=* docker-compose -f docker-compose-gatling-test.yml up
+
+      - name: Collect gatling reports
+        working-directory: ./gatling-lessons
+        run: cp -r target/gatling /gpages
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: gpages/
+          keep_files: true
 
