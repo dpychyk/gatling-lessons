@@ -97,15 +97,15 @@
     <div class="simulation-information-container">
       <span class="simulation-information-item">
         <span class="simulation-information-label">Date: </span>
-        <span>2024-03-25 13:01:55 GMT</span>
+        <span>2024-04-17 14:51:41 GMT</span>
       </span>
       <span class="simulation-information-item">
         <span class="simulation-information-label">Duration: </span>
-        <span>0s</span>
+        <span>5s </span>
       </span>
-      <span class="simulation-information-item">
+      <span class="simulation-tooltip simulation-information-item description" title="Description" data-content="Test">
         <span class="simulation-information-label">Description: </span>
-        <span>&mdash;</span>
+        <span>Test</span>
       </span>
 
     </div>
@@ -196,6 +196,28 @@ function closeStatisticsTableModal () {
   statsTableModal.close();
 }
 </script>
+<div class="statistics extensible-geant collapsed">
+    <div class="title">
+        Errors
+    </div>
+    <table id="container_errors" class="statistics-in extensible-geant">
+        <thead>
+            <tr>
+                <th id="error-col-1" class="header sortable"><span>Error</span></th>
+                <th id="error-col-2" class="header sortable"><span>Count</span></th>
+                <th id="error-col-3" class="header sortable"><span>Percentage</span></th>
+            </tr>
+        </thead>
+		<tbody>
+		    
+		    <tr>
+		    	<td class="error-col-1 total ko">status.find.in([200, 209], 304), found 429<span class="value" style="display:none">0</span></td>
+		    	<td class="value error-col-2 total ko">15</td>
+		    	<td class="value error-col-3 total ko">100 %</td>
+		    </tr>
+		</tbody>
+    </table>
+</div>
 
             <div class="schema geant">
               <div id="active_users" class="geant"></div>
@@ -579,7 +601,7 @@ var allUsersChart = new Highcharts.StockChart({
 color: '#5E7BE2',
 name: 'Plan creation',
 data: [
-  [1711371715000,15]
+  [1713365501000,2],[1713365502000,4],[1713365503000,4],[1713365504000,6],[1713365505000,6],[1713365506000,1]
 ],
 tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }},
 
@@ -615,7 +637,7 @@ var responsetimeDistributionChart = new Highcharts.Chart({
     maskInside: false
   },
   xAxis: {
-    categories: ['307', '309', '312', '324', '325', '326', '327', '338', '339', '350', '351', '352', '353', '359', '360'],
+    categories: ['322', '333', '344', '355', '366', '377', '387', '398', '409', '420', '431', '442', '453', '463', '474', '485', '496', '507', '518', '528', '539', '550', '561', '572', '583', '593', '604', '615', '626', '637', '648', '658', '669', '680', '691', '702', '713', '723', '734', '745', '756', '767', '778', '789', '799', '810', '821', '832', '843', '854', '864', '875', '886', '897', '908', '919', '929', '940', '951', '962', '973', '984', '995', '1005', '1016', '1027', '1038', '1049', '1060', '1070', '1081', '1092', '1103', '1114', '1125', '1135', '1146', '1157', '1168', '1179', '1190', '1200', '1211', '1222', '1233', '1244', '1255', '1266', '1276', '1287', '1298', '1309', '1320', '1331', '1341', '1352', '1363', '1374', '1385', '1396'],
     tickInterval: 20
   },
   yAxis: {
@@ -643,7 +665,7 @@ type: 'column',
 color: '#68b65c',
 name: 'OK',
 data: [
-  3.33,3.33,6.66,3.33,10.0,6.66,3.33,3.33,10.0,10.0,16.66,6.66,6.66,6.66,3.33
+  0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 ],
 tooltip: { yDecimals: 0, ySuffix: 'ms' }
 },
@@ -652,7 +674,7 @@ type: 'column',
 color: '#f15b4f',
 name: 'KO',
 data: [
-  
+  6.66,0.0,0.0,13.33,0.0,0.0,0.0,6.66,0.0,13.33,6.66,0.0,13.33,6.66,0.0,6.66,0.0,0.0,6.66,0.0,0.0,0.0,0.0,0.0,0.0,6.66,0.0,0.0,6.66,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.66
 ],
 tooltip: { yDecimals: 0, ySuffix: 'ms' }
 }
@@ -664,7 +686,7 @@ responsetimeDistributionChart.setTitle({
   useHTML: true
 });
 
-var responsetimepercentilesovertimeokPercentiles = unpack([[1711371715,[307,325,344,351,352,352,353,359,359,360]]]);
+var responsetimepercentilesovertimeokPercentiles = unpack([[1713365501,null],[1713365502,null],[1713365503,null],[1713365504,null],[1713365505,null],[1713365506,null]]);
 
 var responsetimepercentilesovertimeokPercentilesChart = new Highcharts.StockChart({
   chart: {
@@ -861,7 +883,7 @@ responsetimepercentilesovertimeokPercentilesChart.setTitle({
   useHTML: true
 });
 
-var requests = unpack([[1711371715,[30,30,0]]]);
+var requests = unpack([[1713365501,[1,0,1]],[1713365502,[2,0,2]],[1713365503,[2,0,2]],[1713365504,[4,0,4]],[1713365505,[4,0,4]],[1713365506,[2,0,2]]]);
 
 var requestsChart = new Highcharts.StockChart({
   chart: {
@@ -972,7 +994,7 @@ requestsChart.setTitle({
   useHTML: true
 });
 
-var responses = unpack([[1711371715,[30,30,0]]]);
+var responses = unpack([[1713365501,[0,0,0]],[1713365502,[2,0,2]],[1713365503,[2,0,2]],[1713365504,[3,0,3]],[1713365505,[4,0,4]],[1713365506,[4,0,4]]]);
 
 var requestsChart = new Highcharts.StockChart({
   chart: {
@@ -1092,7 +1114,7 @@ tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }
 type: 'pie',
 name: 'Distribution',
 data: [
-  {name: 'OK', y: 30.0, color: '#68b65c'},{name: 'KO', y: 0.0, color: '#f15b4f'}
+  {name: 'OK', y: 0.0, color: '#68b65c'},{name: 'KO', y: 15.0, color: '#f15b4f'}
 ],
 center: [775, -40],
 size: 70,
