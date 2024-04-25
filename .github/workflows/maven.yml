@@ -28,7 +28,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          destination_dir: ${{ github.run_number }}
+          destination_dir: manual
           publish_dir: gatling-lessons/reports/gatling
           keep_files: true
 
