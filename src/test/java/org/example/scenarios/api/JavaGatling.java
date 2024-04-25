@@ -4,14 +4,12 @@ import io.gatling.javaapi.core.ScenarioBuilder;
 import io.gatling.javaapi.core.Simulation;
 import io.gatling.javaapi.http.HttpProtocolBuilder;
 
-import java.time.Duration;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
-import static io.gatling.javaapi.core.CoreDsl.scenario;
-import static io.gatling.javaapi.core.OpenInjectionStep.atOnceUsers;
+import static io.gatling.javaapi.core.CoreDsl.*;
 import static io.gatling.javaapi.http.HttpDsl.http;
 
 public class JavaGatling extends Simulation {
@@ -25,10 +23,22 @@ public class JavaGatling extends Simulation {
     final AtomicInteger i = new AtomicInteger(0);
     Iterator<Map<String, Object>> feeder =  IntStream.of(0, 2)
             .mapToObj((i) -> Map.of("number", (Object) String.format("computer_%s", i))).iterator();
+
+    @Override
+    public void before() {
+        super.before();
+    }
+
     ScenarioBuilder createPlans = scenario("Plan creation")
-            .exec(http("get").get("/"));
+            .exec(http("get").get("/"))
+            .pause(6);
+    ScenarioBuilder createPlans1 = scenario("Plan creation1")
+            .exec(http("get").get("/"))
+            .pause(6);
 
     {
-        setUp(createPlans.injectOpen(atOnceUsers(15))).protocols(httpProtocol).maxDuration(Duration.ofSeconds(180));
+        setUp(createPlans.injectOpen(rampUsers(1).during(1))
+                        .andThen(createPlans1.injectOpen(nothingFor(5), rampUsers(10).during(10)))
+                .protocols(httpProtocol));
     }
 }

@@ -54,10 +54,8 @@
                 <version>${gatling-maven-plugin.version}</version>
 
                 <configuration>
-                    <runMultipleSimulations>true</runMultipleSimulations>
-                    <includes>
-                        <include>${env.SIMULATIONS}</include>
-                    </includes>
+                    <apiToken>fFeNARpVTSGnL.gYwDcG6k9aPIGlp277BTgIiWO0Rh8JImK3TdTZ-pR2UnHgu9PnX</apiToken>
+                    <packageId>my-test-packge</packageId>
                 </configuration>
             </plugin>
         </plugins>

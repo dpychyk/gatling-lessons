@@ -58,7 +58,7 @@
       <div class="content">
         <div class="content-header">
           <div class="onglet">
-            MyTestJavaGatling
+            JavaGatling
           </div>
           <div class="sous-menu" id="sousMenu">
             <div class="sous-menu-spacer">
@@ -97,15 +97,15 @@
     <div class="simulation-information-container">
       <span class="simulation-information-item">
         <span class="simulation-information-label">Date: </span>
-        <span>2024-02-29 19:05:59 GMT</span>
+        <span>2024-03-25 13:01:55 GMT</span>
       </span>
       <span class="simulation-information-item">
         <span class="simulation-information-label">Duration: </span>
         <span>0s</span>
       </span>
-      <span class="simulation-tooltip simulation-information-item description" title="Description" data-content="Test">
+      <span class="simulation-information-item">
         <span class="simulation-information-label">Description: </span>
-        <span>Test</span>
+        <span>&mdash;</span>
       </span>
 
     </div>
@@ -579,7 +579,7 @@ var allUsersChart = new Highcharts.StockChart({
 color: '#5E7BE2',
 name: 'Plan creation',
 data: [
-  [1709233560000,1]
+  [1711371715000,15]
 ],
 tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }},
 
@@ -615,7 +615,7 @@ var responsetimeDistributionChart = new Highcharts.Chart({
     maskInside: false
   },
   xAxis: {
-    categories: ['146', '147', '149', '151', '152', '154', '155', '157', '159', '160', '162', '164', '165', '167', '168', '170', '172', '173', '175', '176', '178', '180', '181', '183', '184', '186', '188', '189', '191', '192', '194', '196', '197', '199', '201', '202', '204', '205', '207', '209', '210', '212', '213', '215', '217', '218', '220', '221', '223', '225', '226', '228', '230', '231', '233', '234', '236', '238', '239', '241', '242', '244', '246', '247', '249', '250', '252', '254', '255', '257', '259', '260', '262', '263', '265', '267', '268', '270', '271', '273', '275', '276', '278', '279', '281', '283', '284', '286', '287', '289', '291', '292', '294', '296', '297', '299', '300', '302', '304', '305'],
+    categories: ['307', '309', '312', '324', '325', '326', '327', '338', '339', '350', '351', '352', '353', '359', '360'],
     tickInterval: 20
   },
   yAxis: {
@@ -643,7 +643,7 @@ type: 'column',
 color: '#68b65c',
 name: 'OK',
 data: [
-  50.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,50.0
+  3.33,3.33,6.66,3.33,10.0,6.66,3.33,3.33,10.0,10.0,16.66,6.66,6.66,6.66,3.33
 ],
 tooltip: { yDecimals: 0, ySuffix: 'ms' }
 },
@@ -652,7 +652,7 @@ type: 'column',
 color: '#f15b4f',
 name: 'KO',
 data: [
-  0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+  
 ],
 tooltip: { yDecimals: 0, ySuffix: 'ms' }
 }
@@ -664,7 +664,7 @@ responsetimeDistributionChart.setTitle({
   useHTML: true
 });
 
-var responsetimepercentilesovertimeokPercentiles = unpack([[1709233560,[145,185,225,265,273,281,289,297,304,306]]]);
+var responsetimepercentilesovertimeokPercentiles = unpack([[1711371715,[307,325,344,351,352,352,353,359,359,360]]]);
 
 var responsetimepercentilesovertimeokPercentilesChart = new Highcharts.StockChart({
   chart: {
@@ -861,7 +861,7 @@ responsetimepercentilesovertimeokPercentilesChart.setTitle({
   useHTML: true
 });
 
-var requests = unpack([[1709233560,[2,2,0]]]);
+var requests = unpack([[1711371715,[30,30,0]]]);
 
 var requestsChart = new Highcharts.StockChart({
   chart: {
@@ -972,7 +972,7 @@ requestsChart.setTitle({
   useHTML: true
 });
 
-var responses = unpack([[1709233560,[2,2,0]]]);
+var responses = unpack([[1711371715,[30,30,0]]]);
 
 var requestsChart = new Highcharts.StockChart({
   chart: {
@@ -1092,7 +1092,7 @@ tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }
 type: 'pie',
 name: 'Distribution',
 data: [
-  {name: 'OK', y: 2.0, color: '#68b65c'},{name: 'KO', y: 0.0, color: '#f15b4f'}
+  {name: 'OK', y: 30.0, color: '#68b65c'},{name: 'KO', y: 0.0, color: '#f15b4f'}
 ],
 center: [775, -40],
 size: 70,
