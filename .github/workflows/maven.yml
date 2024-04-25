@@ -30,5 +30,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           destination_dir: manual
           publish_dir: gatling-lessons/reports/gatling
-          keep_files: false
+          keep_files: true
 
