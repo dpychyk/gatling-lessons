@@ -24,6 +24,26 @@ jobs:
         with:
           path: gatling-lessons
 
+      - id: env-setup
+        run: |
+          {
+            "env_token=production"
+            "env_domain=example.com"
+          } >> $GITHUB_OUTPUT
+
+          {
+            echo "### Workflow variables"
+            echo "| Variable   | Value       |"
+            echo "| ---------- | ----------- |"
+            echo "| env_token  | $env_token  |"
+            echo "| env_domain | $env_domain |"
+          } >> $GITHUB_STEP_SUMMARY
+
+      - id: links step
+        run: |
+          {
+            echo "https://samanpavel.medium.com/"
+          } >> $GITHUB_STEP_SUMMARY
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
