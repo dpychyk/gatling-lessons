@@ -39,7 +39,7 @@ jobs:
             echo "| env_domain | $env_domain |"
           } >> $GITHUB_STEP_SUMMARY
 
-      - id: links step
+      - id: links-step
         run: |
           {
             echo "https://samanpavel.medium.com/"
