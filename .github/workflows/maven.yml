@@ -27,11 +27,6 @@ jobs:
       - id: env-setup
         run: |
           {
-            "env_token=production"
-            "env_domain=example.com"
-          } >> $GITHUB_OUTPUT
-
-          {
             echo "### Workflow variables"
             echo "| Variable   | Value       |"
             echo "| ---------- | ----------- |"
